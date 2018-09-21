@@ -1,0 +1,35 @@
+<div class="container">
+    <!-- Parent Component -->
+    <app-parent>
+
+        <!-- Child Component -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                    <h3 class="card-title">Child Component</h3>
+            </div>
+            <div class="card-body">
+                <p>Number: <app-child></app-child></p>
+            </div>
+        </div>
+
+        <!-- Child Directive -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Child Directive</h3>
+            </div>
+            <div class="card-body">
+               <p>Number: <strong appChild>0</strong></p>
+            </div>
+        </div>
+        
+        <!-- Child Element -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Template Reference</h3>
+            </div>
+            <div class="card-body">
+                <p>Number: <strong #ChildElement>0</strong></p>
+            </div>
+        </div>
+    </app-parent>
+</div>

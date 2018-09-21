@@ -1,0 +1,68 @@
+<!-- Parent Component Component -->
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h3 class="card-title">Parent Component</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-borderless">
+            <tr>
+                <td>
+                    Child Component
+                </td>
+                <td>
+                    <button class="btn btn-info" (click)="accessChildComponentClassInstanceMethod()">Generte Random
+                        Number on Child Component using Child Component Instance</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Child Directive
+                </td>
+                <td>
+                    <button class="btn btn-info" (click)="accessChildDirectiveClassInstanceMethod()">Generte Random
+                        Number on Child Directive using Child Directive Instance</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Child Element
+                </td>
+                <td>
+                    <button class="btn btn-info" (click)="accessTemplateReferenceDOM()">Generte Random Number on
+                        Template Reference Element</button>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Child Component -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Child Component</h3>
+            </div>
+            <div class="card-body">
+                <p>Number: <app-child></app-child>
+                </p>
+            </div>
+        </div>
+
+        <!-- Child Directive -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Child Directive</h3>
+            </div>
+            <div class="card-body">
+                <p>Number: <strong appChild>0</strong></p>
+            </div>
+        </div>
+
+        <!-- Child Element -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Template Reference</h3>
+            </div>
+            <div class="card-body">
+                <p>Number: <strong #ChildElement>0</strong></p>
+            </div>
+        </div>
+    </div>
+</div>

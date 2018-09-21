@@ -1,0 +1,36 @@
+<!-- Parent Component Component -->
+<div class="card">
+  <div class="card-header bg-primary text-white">
+      <h3 class="card-title">Parent Component</h3>
+  </div>
+  <div class="card-body">
+      <table class="table table-borderless">
+        <tr>
+            <td>
+                Child Component
+            </td>
+            <td>
+                <button class="btn btn-info" (click)="accessChildComponentClassInstanceMethod()">Generte Random Number on Child Component using Child Component Instance</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Child Directive
+            </td>
+            <td>
+                <button class="btn btn-info" (click)="accessChildDirectiveClassInstanceMethod()">Generte Random Number on Child Directive using Child Directive Instance</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Child Element
+            </td>
+            <td>
+                <button class="btn btn-info" (click)="accessTemplateReferenceDOM()">Generte Random Number on Template Reference Element</button>
+            </td>
+        </tr>
+      </table>
+      <!-- Projection Area -->
+      <ng-content></ng-content>
+  </div>
+</div>
