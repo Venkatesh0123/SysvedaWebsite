@@ -1,0 +1,40 @@
+<div class="jumbotron vertical-center">
+  <div class="container">
+    <h1 class="display-4">Advanced Http Services(CRUD)</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="text-right mb-3">
+      <a class="btn btn-primary btn-sm" [routerLink]="['add']"><i class="fa fa-plus" aria-hidden="true"></i> Add</a>
+  </div>
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+        <h5 class="card-title mb-0"> Users</h5>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}</td>
+                    <td>
+                        <a class="mr-2" [routerLink]="['edit',user.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a class="text-danger" (click)="deleteUser(user.id)" href="javascript:void(0)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>

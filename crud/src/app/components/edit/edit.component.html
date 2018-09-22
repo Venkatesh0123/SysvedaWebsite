@@ -1,0 +1,127 @@
+<div class="jumbotron vertical-center">
+    <div class="container">
+      <h1 class="display-4">Advanced Http Services(CRUD)</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+          <h5 class="card-title mb-0"> Edit User</h5>
+      </div>
+      <div class="card-body">
+          <form [formGroup]="userForm" [class.ngSubmitted]="submitted" (ngSubmit)="onSubmit(userForm)">
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label required">Name</label>
+                  <div class="col-md-9">
+                      <input type="hidden" formControlName="id">
+                      <input class="form-control" type="text" formControlName="name" placeholder="Name">
+                      <div class="invalid-feedback">The Name field field is required.</div>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label required">Username</label>
+                  <div class="col-md-9">
+                      <input class="form-control" type="text" formControlName="username" placeholder="Username">
+                      <div class="invalid-feedback">The Username field is required.</div>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label required">Email</label>
+                  <div class="col-md-9">
+                      <input class="form-control" type="email" formControlName="email" placeholder="Email">
+                      <div class="invalid-feedback">Provide a valid Email address.</div>
+                  </div>
+              </div>
+              <div formGroupName="address">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label required">Street</label>
+                  <div class="col-md-9">
+                      <input class="form-control" type="text" formControlName="street" placeholder="Street">
+                      <div class="invalid-feedback">The Street field is required.</div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label required">Suite</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" formControlName="suite" placeholder="Suite">
+                        <div class="invalid-feedback">The Suite field is required.</div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label required">City</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" formControlName="city" placeholder="City">
+                        <div class="invalid-feedback">The City field is required.</div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label required">Zipcode</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" formControlName="zipcode" placeholder="Zipcode">
+                        <div class="invalid-feedback">The Zipcode field is required.</div>
+                    </div>
+                </div>
+                <div formGroupName="geo">
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label required">Longitude</label>
+                        <div class="col-md-9">
+                            <input class="form-control" type="text" formControlName="lng" placeholder="Longitude">
+                            <div class="invalid-feedback">The Longitude field is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label required">Latitude</label>
+                      <div class="col-md-9">
+                          <input class="form-control" type="text" formControlName="lat" placeholder="Latitude">
+                          <div class="invalid-feedback">The Latitude field is required.</div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label required">Phone</label>
+                  <div class="col-md-9">
+                      <input class="form-control" type="text" formControlName="phone" placeholder="Phone">
+                      <div class="invalid-feedback">The Phone field is required.</div>
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label required">Website</label>
+                  <div class="col-md-9">
+                      <input class="form-control" type="url" formControlName="website" placeholder="Website">
+                      <div class="invalid-feedback">The Website field is required.</div>
+                  </div>
+              </div>
+              <div formGroupName="company">
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label required">Company Name</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" formControlName="name" placeholder="Company Name">
+                        <div class="invalid-feedback">The Company Name field is required.</div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <label class="col-md-3 col-form-label required">Company Catch Phrase</label>
+                      <div class="col-md-9">
+                          <input class="form-control" type="text" formControlName="catchPhrase" placeholder="Company Catch Phrase">
+                          <div class="invalid-feedback">The Catch Phrase field is required.</div>
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label class="col-md-3 col-form-label required">Company Business</label>
+                      <div class="col-md-9">
+                          <input class="form-control" type="text" formControlName="bs" placeholder="Company Business">
+                          <div class="invalid-feedback">The Business field is required.</div>
+                      </div>
+                  </div>
+                </div>
+              <div class="form-group row">
+                  <div class="col-md-9 ml-md-auto">
+                      <button type="submit" class="btn btn-primary mr-2"><i class="fa fa-floppy-o" aria-hidden="true"></i> Update</button>
+                      <a class="btn btn-danger" [routerLink]="['']"><i class="fa fa-times" aria-hidden="true"></i> Cancel</a>
+                  </div>
+              </div>
+            </form>
+      </div>
+    </div>
+  </div>
