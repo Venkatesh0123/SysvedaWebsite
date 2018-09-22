@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "username": "John Doe",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "phone": "0106926593"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "phone": "14631234447"
+    },
+    {
+      "id": 4,
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "phone": "4931709623"
+    },
+    {
+      "id": 5,
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "phone": "(254)9541289"
+    }
+  ]
+}

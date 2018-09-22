@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Reactive Form</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label required">Username</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" formControlName="username" placeholder="Username" [class.is-invalid]="userForm.get('username').errors && ( userForm.get('username').touched || submitted )">
+                        <div class="invalid-feedback" *ngIf="userForm.get('username').touched || submitted">
+                            <div *ngIf="userForm.get('username').hasError('required')">The Username field is required.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label required">Email</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="email" formControlName="email" placeholder="Email" [class.is-invalid]="userForm.get('email').errors && ( userForm.get('email').touched || submitted )">
+                        <div class="invalid-feedback" *ngIf="userForm.get('email').touched || submitted">
+                            <div *ngIf="userForm.get('email').hasError('required')">The Email field is required.</div>
+                            <div *ngIf="userForm.get('email').hasError('email')">Provide a valid Email address.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label required">Phone</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="tel" formControlName="phone" placeholder="Phone" [class.is-invalid]="userForm.get('phone').errors  && ( userForm.get('phone').touched || submitted )">
+                        <div class="invalid-feedback" *ngIf="userForm.get('phone').touched || submitted">
+                            <div *ngIf="userForm.get('phone').hasError('required')">The Phone field is required.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-9 ml-md-auto">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+              </form>
+              <div class="debug_log">
+                  <p><strong>Submitted</strong>: {{ submitted }}</p>
+                  <p><strong>Isvalid</strong>: {{ userForm.valid }}</p>
+                  <p><strong>Form values</strong>: {{ userForm.value | json }}</p>
+              </div>
+        </div>
+    </div>
+</div>

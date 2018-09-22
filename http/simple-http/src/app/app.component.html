@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Get Method</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <button class="btn btn-info mb-2" (click)="getUsers()">Get Users</button>
+                <p><strong>Users</strong>: {{ users | json }}</p>
+            </div>
+            <div>
+                <button class="btn btn-info mb-2" (click)="getUser()">Get User</button>
+                <p><strong>User</strong>: {{ user | json }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Post Method</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <button class="btn btn-info mb-2" (click)="addUser()">Add User</button>
+                <p><strong>Payload</strong>: {{ insertPayload | json }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Put Method</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <button class="btn btn-info mb-2" (click)="updateUser()">Update User</button>
+                <p><strong>Payload</strong>: {{ updatePayload | json }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Patch Method</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <button class="btn btn-info mb-2" (click)="patchUser()">Update User</button>
+                <p><strong>Payload</strong>: {{ patchPayload | json }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Delete Method</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <button class="btn btn-info mb-2" (click)="deleteUser()">Delete User</button>
+            </div>
+        </div>
+     </div>
+</div>
