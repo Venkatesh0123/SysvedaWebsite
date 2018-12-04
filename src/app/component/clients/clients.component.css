@@ -12,3 +12,7 @@ text-align: center;
 display:inline-block;
 width:50%
 }
+
+.sebm-google-map-container {
+    height: 300px;
+  }
